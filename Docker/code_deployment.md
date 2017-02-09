@@ -10,3 +10,8 @@
   * run
     * docker run -v \<local_project_dir e.g. "$PWD"\>:\<work_dir> -w \<work_dir\> \<base_docker_image\> \<init_command e.g. npm install\>
     * docker run -v \<local_project_dir e.g. "$PWD"\>:\<work_dir\> -w \<work_dir\> \<base_docker_image\> \<init_command e.g. npm app.js\>
+
+Reference:
+
+https://hub.docker.com/_/httpd/
+http://www.ibm.com/developerworks/library/wa-docker-polyglot-programmers/index.html#download
