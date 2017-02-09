@@ -13,5 +13,5 @@
 
 Reference:
 
-https://hub.docker.com/_/httpd/
-http://www.ibm.com/developerworks/library/wa-docker-polyglot-programmers/index.html#download
+* https://hub.docker.com/_/httpd/
+* http://www.ibm.com/developerworks/library/wa-docker-polyglot-programmers/index.html#download
