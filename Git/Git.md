@@ -4,4 +4,5 @@
 
 2. Squash commits:
     * $git rebase -i HEAD~\<number_of_commits\> or $git rebase -i \<local_branch\> then edit 'pick' to 'squash' for each commit to be squashed (Reference: https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/)
+    * Then force flush local commit history: git push origin <branch> --force
     
