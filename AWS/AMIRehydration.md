@@ -18,5 +18,5 @@ AMI Rehydration Steps:
 7. Cleanup: original instance and new EBS volume.
 
 8. Troubleshoot:
-    * "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! ECDSA host key for 11.222.12.12 has changed and you have requested strict checking..." __Solution__: Edit local file /Users/name/.ssh/known_hosts to include new instance IP address.
+    * "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! ECDSA host key for 11.222.12.12 has changed and you have requested strict checking..." __Solution__: Edit local file /Users/name/.ssh/known_hosts to remove old instance IP address entry.
    
