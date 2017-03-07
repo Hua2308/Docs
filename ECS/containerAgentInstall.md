@@ -2,6 +2,9 @@
 
 Steps:
 
+0. Prerequisite
+  * Make sure ec2 instance has an [IAM role](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance_IAM_role.html) attached.
+
 1. Install Docker
   * [Instructions](https://github.com/Hua2308/Docs/blob/master/Docker/installation.md)
   
