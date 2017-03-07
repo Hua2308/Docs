@@ -1,5 +1,5 @@
 __Linux__
-* Red Hat
+* Red Hat 7
   * 1.Create a yum repo file: /etc/yum.repos.d/docker.repo. File content is as below:
   ```
        [docker]  
