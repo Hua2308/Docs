@@ -1,6 +1,6 @@
 __Linux__
 * Red Hat 7
-  * 1.Create a yum repo file: /etc/yum.repos.d/docker.repo. File content is as below:
+  * 1. Create a yum repo file: /etc/yum.repos.d/docker.repo. File content is as below:
   ```
        [docker]  
        name=Docker Repository  
@@ -12,11 +12,24 @@ __Linux__
        proxy_username:<proxy_username>
        proxy_password:<proxy_password>
 ```
-  * 2.Install docker: 
+  * 2. Install docker: 
         
        `$ yum install -y docker-engine`
-   
-  * 3.Finish up:
+  
+  * 3. [Setup http proxy](https://docs.docker.com/engine/admin/systemd/#http-proxy) for docker daemon:
+       * Make a directory
+         * `$ mkdir -p /etc/systemd/system/docker.service.d`
+       * Create a config file
+         * `$ touch /etc/systemd/system/docker.service.d/http-proxy.conf`
+       * Add HTTP_PROXY, HTTPS_PROXY, and NO_PROXY env variables
+         ```
+          [Service]
+             Environment="HTTP_PROXY=<proxy_url>" "HTTPS_PROXY=<proxy_url>" "NO_PROXY=[e.g. localhost,127.0.0.1]"
+         ```
+       * **Note:** This proxy is only for docker daemon. For individual container, proxy has to be configured **again** while starting a new container, e.g.:
+       `$ docker run --name <image-name> ... --env=HTTP_PROXY=<proxy_url> --env=<proxy_url> --env=NO_PROXY=<no_proxy_url>`
+       
+  * 4. Finish up:
    
        `$ systemctl daemon-reload`  
        `$ systemctl start docker`  
