@@ -1,22 +1,23 @@
 __Linux__
 * Red Hat 7
   1. Create a yum repo file: /etc/yum.repos.d/docker.repo. File content is as below:
-  ```
-       [docker]  
-       name=Docker Repository  
-       baseurl=https://yum.dockerproject.org/repo/main/centos/7  
-       enabled=1  
-       gpgcheck=1  
-       gpgkey=https://yum.dockerproject.org/gpg  
-       proxy=<proxy_url>  
-       proxy_username:<proxy_username>
-       proxy_password:<proxy_password>
-  ```
+      
+      ```
+           [docker]  
+           name=Docker Repository  
+           baseurl=https://yum.dockerproject.org/repo/main/centos/7  
+           enabled=1  
+           gpgcheck=1  
+           gpgkey=https://yum.dockerproject.org/gpg  
+           proxy=<proxy_url>  
+           proxy_username:<proxy_username>
+           proxy_password:<proxy_password>
+      ```
   2. Install docker: 
         
        `$ yum install -y docker-engine`
   
-  3. [Setup http proxy](https://docs.docker.com/engine/admin/systemd/#http-proxy) for docker daemon:
+  3. **Optional**: [Setup http proxy](https://docs.docker.com/engine/admin/systemd/#http-proxy) for docker daemon:
        
        * Make a directory
          `$ mkdir -p /etc/systemd/system/docker.service.d`
