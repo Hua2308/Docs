@@ -2,4 +2,6 @@
      * `~/.m2/repository`
 
 2. Default setting.xml location(usually overwritten by project's setting.xml):
-     * `~/maven_installation_dir/conf`
+     * Global `~/maven_installation_dir/conf/setting.xml`
+     * Local(per user) `~/.m2/setting.xml`
+     * Note: local setting always overwrites global settings
