@@ -1,8 +1,25 @@
-1. Update local branch after 'Git pull' remote changes:
-    * Method a. $git reset --hard origin/\<local_branch\>
-    * Method b. $git rebase \<remote_branch_to_be_as_base\> \<local_branch\>
+1. Revert local change and reset current branch with remote:
+    * `$git reset --hard origin/\<local_branch\>`
 
-2. Squash commits:
-    * $git rebase -i HEAD~\<number_of_commits\> or $git rebase -i \<local_branch\> then edit 'pick' to 'squash' for each commit to be squashed (Reference: https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/)
-    * Then force flush local commit history: git push origin <branch> --force
-    
+2. Incoporate master branch changes with your working branch:
+    * Merge
+      *  `$git checkout <your_branch>` then `$git merge master` or,
+      *  `$git merge master <your_branch>`
+      *  Pros: Preserve intact commit history
+      *  Cons: History is figure-cross merged, and may 'pollute' your local branch history.
+    * Rebase
+      *  `$git checkout <your_branch>` then `$git rebase master` or,
+      *  `$git rebase master <your_branch>`
+      *  Pros: Lineal history (B/c your commit always starts from the tail, so no figure-cross), and you can squash commits along the way.
+      *  Cons: Rewrite your local branch history (b/c inject master history first)
+    * For a visual comparison, see [Merge vs Rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
+3. Clean up commit history(i.e. Squash commits):
+      * When rebase local branch with remote:
+         *  `$git rebase -i master` then edit 'pick' to 'squash' for each commit to be squashed.
+         *  ~~Then force flush local commit history: `$git push origin <branch>` --force~~
+      * Just local clean up, no actual branch rebase:
+         *  `$git rebase -i HEAD~<number_of_commits>`
+
+
+
