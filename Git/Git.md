@@ -12,7 +12,7 @@
       *  `$git rebase master <your_branch>`
       *  Pros: Lineal history (B/c your commit always starts from the tail, so no figure-cross), and you can squash commits along the way.
       *  Cons: Rewrite your local branch history (b/c inject master history first)
-    * For a visual comparison, see [Merge vs Rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+    * For a visual comparison in flow diagram, see [Merge vs Rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
 3. Clean up commit history(i.e. Squash commits):
       * When rebase local branch with remote:
