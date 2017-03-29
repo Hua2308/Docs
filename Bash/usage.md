@@ -20,3 +20,6 @@
   3. Define and use variable
     * define: export some_variable = some_value
     * use: $some_variable
+  
+  4. Debug a bash script
+    * $bash -x <script_name>
