@@ -17,9 +17,13 @@
     }
   ```
   
-  3. Define and use variable
-    * define: export some_variable = some_value
-    * use: $some_variable
+3. Define and use variable
+   * define: export some_variable = some_value
+   * use: $some_variable
   
-  4. Debug a bash script
-    * $bash -x <script_name>
+4. Debug a bash script
+   * $bash -x <script_name>
+
+5. Insert or replace text
+   * Insert text after reg match `sed -i /<match_text>/a<insert_text> file.txt`
+   * Replace text after reg match `sed -i /<match_text>/c<replace_text> file.txt` 
