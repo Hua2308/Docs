@@ -25,8 +25,11 @@
    * $bash -x <script_name>
 
 5. Insert or replace text
-   * Insert text after reg match `sed -i /<match_text>/a<insert_text> file.txt`
-   * Replace text after reg match `sed -i /<match_text>/c<replace_text> file.txt` 
+   * Whole line
+     * Insert text after reg match `sed -i /<match_text>/a<insert_text> file.txt`
+     * Replace text after reg match `sed -i /<match_text>/c<replace_text> file.txt` 
+   * Exact matched text
+     * Replace text after reg match `sed -i s/<match_text>/<replace_text>/g file.txt`
 
 6. Save command result to a variable
    * some_var=$(some_command)
