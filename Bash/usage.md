@@ -27,3 +27,6 @@
 5. Insert or replace text
    * Insert text after reg match `sed -i /<match_text>/a<insert_text> file.txt`
    * Replace text after reg match `sed -i /<match_text>/c<replace_text> file.txt` 
+
+6. Save command result to a variable
+   * some_var=$(some_command)
