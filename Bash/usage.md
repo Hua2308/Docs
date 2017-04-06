@@ -30,3 +30,13 @@
 
 6. Save command result to a variable
    * some_var=$(some_command)
+   
+7. Check if a variable is null
+   * `if [ -z "$VAR" ];` returns true if the variable is unset or set to the empty string ("")
+
+8. If statement
+```
+  if condition; then
+    statement;
+  fi
+```
