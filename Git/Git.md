@@ -8,6 +8,7 @@
       *  Pros: Preserve intact commit history
       *  Cons: History is figure-cross merged, and may 'pollute' your local branch history.
     * Rebase
+      *  Before rebase, make sure local changes have been pushed and is sync with master.
       *  `$git checkout <your_branch>` then `$git rebase master` or,
       *  `$git rebase master <your_branch>`
       *  Pros: Lineal history (B/c your commit always starts from the tail, so no figure-cross), and you can squash commits along the way.
