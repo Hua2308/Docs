@@ -9,8 +9,8 @@
       *  Cons: History is figure-cross merged, and may 'pollute' your local branch history.
     * Rebase
       *  Before rebase, make sure local changes have been pushed and is sync with master.
-      *  `$git checkout <your_branch>` then `$git rebase master` or,
-      *  `$git rebase master <your_branch>`
+      *  `$git checkout <your_branch>` then `$git rebase -i origin/master` then `$git push origin master --force` or,
+      *  `$git rebase -i origin/master <your_branch>` then `$git push origin master --force`
       *  Pros: Lineal history (B/c your commit always starts from the tail, so no figure-cross), and you can squash commits along the way.
       *  Cons: Rewrite your local branch history (b/c inject master history first)
     * For a visual comparison in flow diagram, see [Merge vs Rebase](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
