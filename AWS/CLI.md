@@ -9,3 +9,9 @@ Note: `--output text` removes square bracket from result.
 aws --region us-east-1 ec2 describe-instances --filters 'Name=tag:Name,Values=<Instance_Name>' --query 'Reservations[].Instances[].PrivateIpAddress' --output text
 ```
 Note: `PrivateIpAddress` is case sensitive. `PRIVATEIPADDRESS` does NOT work.
+
+3. List Instances Name/ID/AMI by Contact tag:
+```
+aws ec2 describe-instances --filters Name=tag:OwnerContact,Values=your@emailaddress --query "Reservations[].Instances[].{InstanceID:InstanceId, AMI:ImageId, Name:Tags[?Key=='Name']|[0].Value}" --output table
+```
+Note: `--output table` print a table view. `{InstanceID:InstanceId, AMI:ImageId, Name:Tags[?Key=='Name']|[0].Value}"` can be `[InstanceId, ImageId, Tags[?Key=='Name']|[0].Value]` to skip table head.
