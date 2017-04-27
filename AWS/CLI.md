@@ -20,6 +20,6 @@ Note: `--output table` print a table view. `{InstanceID:InstanceId, AMI:ImageId,
 ```
 aws autoscaling describe-tags --query Tags[?Value=="'Earthquake@capitalone.com'"].{AutoScalingGroupName:ResourceId} --output table
 ```
-Note: ```"'Earthquake@capitalone.com'"``` single quotes has to be inside double quotes, not the other way around of just one pair of quotes.
+Note: ```"'Earthquake@capitalone.com'"``` single quotes has to be inside double quotes, not the other way around or just one pair of quotes.
 
 [Query Syntax Reference](http://jmespath.org/tutorial.html#filter-projections)
