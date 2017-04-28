@@ -18,8 +18,31 @@ Note: `--output table` print a table view. `{InstanceID:InstanceId, AMI:ImageId,
 
 4. List AutoScalingGroup Name by Contact tag:
 ```
-aws autoscaling describe-tags --query Tags[?Value=="'Earthquake@capitalone.com'"].{AutoScalingGroupName:ResourceId} --output table
+aws autoscaling describe-tags --query Tags[?Value=="'Your@EmailAddress'"].{AutoScalingGroupName:ResourceId} --output table
 ```
-Note: ```"'Earthquake@capitalone.com'"``` single quotes has to be inside double quotes, not the other way around or just one pair of quotes.
+Note: ```"'Your@EmailAddress'"``` single quotes has to be inside double quotes, not the other way around or just one pair of quotes.
+
+5. List Elastic Load Balancer by Contact tag:
+```
+# All elbs in one region
+elblist=$(aws elb describe-load-balancers --query LoadBalancerDescriptions[*].LoadBalancerName --output text)
+# 20 elbs
+elbs=""
+# consent engine elbs
+consent_elbs=""
+# counter of 20 for limitation
+counter=0
+for elb in $elblist; do
+    elbs="$elbs $elb"
+    counter=$((counter+1))
+    if [ $counter -gt 19 ]; then
+        consent_elbs="$consent_elbs $(aws elb describe-tags --load-balancer-name $elbs --query TagDescriptions[?Tags[?Value=="'Your@EmailAddress'"]].LoadBalancerName --output text)"
+        elbs=""
+        counter=0
+    fi
+done
+aws elb describe-tags --load-balancer-name $consent_elbs --query TagDescriptions[?Tags[?Value=="'Your@EmailAddress'"]].{ElbName:LoadBalancerName} --output table
+
+```
 
 [Query Syntax Reference](http://jmespath.org/tutorial.html#filter-projections)
