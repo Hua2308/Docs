@@ -24,4 +24,9 @@
    * List all running containers  
      * ```docker ps```
      
-
+* Workflow
+  * a. Create a local image or pull it from remote
+  * b. Run image as a container (-it as interactive mode)
+  * c. Stop container
+  * d. Delete image or push image
+  
