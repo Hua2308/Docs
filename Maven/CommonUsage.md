@@ -5,3 +5,6 @@
      * Global `~/maven_installation_dir/conf/setting.xml`
      * Local(per user) `~/.m2/setting.xml`
      * Note: local setting always overwrites global settings
+ 
+3. Install custom library into Maven local repository ([Reference](https://www.mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/))
+     * ``` mvn install:install-file -Dfile=<path_to_jar_file> -DgroupId=<groupId> -DartifactId=<ArtifactId> -Dversion={version} -Dpackaging=jar ```
