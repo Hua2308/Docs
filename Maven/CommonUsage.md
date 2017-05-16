@@ -8,3 +8,9 @@
  
 3. Install custom library into Maven local repository ([Reference](https://www.mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/))
      * ``` mvn install:install-file -Dfile=<path_to_jar_file> -DgroupId=<groupId> -DartifactId=<ArtifactId> -Dversion={version} -Dpackaging=jar ```
+
+4. Compile or package(compile+package) source ([Reference](https://spring.io/guides/gs/maven/#_build_java_code))
+     * compile ``` mvn compile ```
+       * This will run Maven, telling it to execute the compile goal. When it’s finished, you should find the compiled .class files in the target/classes directory.
+     * package ``` mvn package ```
+       * The package goal will compile your Java code, run any tests, and finish by packaging the code up in a JAR file within the target directory.
