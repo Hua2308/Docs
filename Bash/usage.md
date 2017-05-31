@@ -43,3 +43,8 @@
     statement;
   fi
 ```
+
+9. Clear previous output (Mac OS)
+```
+COMMAND + K
+```
