@@ -9,6 +9,6 @@
 
 4. Enable proxy ```npm set proxy=<proxy_url>``` and ```npm set https-proxy=<proxy_url>```
 
-Note: once local package is built, it cannot be installed directly, but has to be uploaded to npm registry first.
+Note: once a local package is built, it cannot be installed directly, but has to be uploaded to npm registry first.
 
    #### [Reference](https://www.sitepoint.com/beginners-guide-node-package-manager/)
