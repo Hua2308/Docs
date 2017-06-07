@@ -1,4 +1,5 @@
 1. Show npm configurations: ``` $npm config list```
+ * __Note__: default config is NOT shown by cmd above, to show all, use ```$npm config list -l```
 
 2. Install package 
  * locally(../node_modules) ```npm install <package_name>```
