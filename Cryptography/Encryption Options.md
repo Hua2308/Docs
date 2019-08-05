@@ -7,7 +7,7 @@
 * __DES__: symmetric-key algorithm
 	* 56 bits key
 
-* __AED__: symmetric-key algorithm
+* __AES__: symmetric-key algorithm
 	* 128/192/256 bits key
 
 * __RSA__: asymmetric public-private key cryptosystem
