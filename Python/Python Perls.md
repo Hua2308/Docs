@@ -41,6 +41,39 @@
 		
 		# Note: words[:] create a new copy of words
 
+**14** Loop's else statement will be executed when exhaustion of the list, but not when the loop is terminated by a break statement.
+
+**15** **kwargs must be behind *args. Args are mandatory, and Kwargs are optional**
+
+	def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue')
+		...
+	
+	Valid calling ways:
+	parrot(1000)                                          # 1 positional argument
+	parrot(voltage=1000)                                  # 1 keyword argument
+	parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments
+	parrot(action='VOOOOOM', voltage=1000000)             # 2 keyword arguments
+	parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments. **Use position arguments to init keyward arguments**
+	parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
+	
+	Invalid calling ways:
+	parrot()                     # required argument missing
+	parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword argument
+	parrot(110, voltage=220)     # duplicate value for the same argument
+	parrot(actor='John Cleese')  # unknown keyword argument
+
+**16** Arbitrary argument lists
+	
+	def parrot(*args, **kwargs)
+		...
+	
+	Note: args is a tuple. kwargs is a dictionary.
+
+**17** **Unpack argument lists.**  
+when arguments are in a list/tuple or dictionary, we can unpack them to pass into a function. **Unpack means break one entity(list or tuple) into many elements.** So, * unpacks a list/tuple, and ** unpack dictionary.
+
+**18** 
+
 	  
 
 
