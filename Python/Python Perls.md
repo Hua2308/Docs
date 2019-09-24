@@ -73,6 +73,43 @@
 when arguments are in a list/tuple or dictionary, we can unpack them to pass into a function. **Unpack means break one entity(list or tuple) into many elements.** So, * unpacks a list/tuple, and ** unpack dictionary.
 
 **18** 
+Queue implementation: insert or pop from the beginning of list is slow. Use collections.deque to implement a queue like ```deque(list_of_items)```
+
+**19**
+Control number precision: round(num, i) will round number to i decimal digits. E.g. round(pi, 2) = 3.14
+
+**20**
+Zip takes a list of tuples, or *(list_of_list), and zip together nth element.
+
+**21**
+```t = 1,2,3``` this initiated a tuple. And tuple is **immutable**. ```a,b,c = t``` unpack a tuple
+
+**22**
+dictionary key has to be immutable. If tuple contains list, then this tuple cannot be used as key.
+
+**23**
+list(dict) will return a list of all the keys. sort(dict) will sort dict by keys.
+
+**24**   
+Looping dict:   
+		* keys&values: ```k, v in dict.items()```    
+		* keys: ```k in dict.keys()```              
+		* values: ```v in dict.values()```    
+Looping sequence(with index)
+		* for i,v in enumerate(['tic', 'tac', 'toe'])
+
+**25**
+range(a,b) is left inclusive, right exclusive. So range(1, 10) is 1 - 9, **range(10, 1, -1) is 10 - 2**        
+
+**26**
+```and``` and ```or``` are short-circuit operators, and the evaluation stops as soon as the outcome determines. E.g.
+
+```
+string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
+>>> non_null = string1 or string2 or string3
+>>> non_null
+'Trondheim'
+```
 
 	  
 
