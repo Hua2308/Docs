@@ -111,6 +111,20 @@ string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
 'Trondheim'
 ```
 
+**27**
+```From fibo import *``` will not import those beginning with **_**, and if __all__ is not defined in __init__.py, it will NOT import any submodules.
+
+**28**
+```python fibo.py 50``` then, ```sys.argv[1]``` can retrieve it.
+
+**29** any .py file can be a module, and any directory with __init__.py is a package
+
+**30** ```with open('some_file') as f``` this is good practice as file will be automatically closed after its suite finishes
+
+**31** ```try except``` only execute one except, which is the first one that catches it ( super/base exception first ). In ```try except else```, else will run if except does not execute. In ```try finally```, finally will always run no matter whether exception occurs.
+
+
+
 	  
 
 
