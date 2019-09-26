@@ -123,6 +123,8 @@ string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
 
 **31** ```try except``` only execute one except, which is the first one that catches it ( super/base exception first ). In ```try except else```, else will run if except does not execute. In ```try finally```, finally will always run no matter whether exception occurs.
 
+**32** Multi-inheritance, derived class can override any methods of its base classes, 
+
 
 
 	  
