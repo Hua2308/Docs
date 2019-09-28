@@ -129,6 +129,23 @@ string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
 
 **33** use ```import os``` instead of ```from os import *```, as __os.open()__ will shadow __open()__
 
+**34**    
+ ```map(function, sequence)```: apply function to each of element   
+ ```filter(function, sequence)```: apply function to each of element, function has to return True or False to filter
+ ```reduce(function, sequence)```: apply function to each of element, and combine the result
+ 
+**35**
+Change variable inside a function should use **global**:   
+
+```
+a = 3
+def some_fun():
+	global a
+	a = 4
+```
+ 
+
+
 
 
 	  
