@@ -123,7 +123,11 @@ string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
 
 **31** ```try except``` only execute one except, which is the first one that catches it ( super/base exception first ). In ```try except else```, else will run if except does not execute. In ```try finally```, finally will always run no matter whether exception occurs.
 
-**32** Multi-inheritance, derived class can override any methods of its base classes, 
+**32** Multi-inheritance; derived class can override any methods of its base classes; Class is also an object.
+
+**33** ```yield``` is used in a loop to save the state locally and can be resumed for next interation. Function that has yield is called generator, and will not run when call it, but only through interation.
+
+**33** use ```import os``` instead of ```from os import *```, as __os.open()__ will shadow __open()__
 
 
 
