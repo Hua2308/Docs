@@ -143,7 +143,47 @@ def some_fun():
 	global a
 	a = 4
 ```
- 
+
+## Exam perls
+
+a. **+1/-1** is valid and equals to -1.0.   
+Explanation: positive/negative sign has a higher precedence than arithmatic *, -
+     
+b. ```[x ** 3 for x in 1..5]``` is invalid.   
+Explanation: no .. in python.    
+
+c. Function name can be re-defined as varible:   
+
+```
+	def func():
+		return 2
+
+	func = func() + 1
+	print(func) # valid, 3
+	print(func()) # invalid, because func is a variable now
+```
+
+d. data = [1, 2, 3], **data.index(3)** is 2
+
+e. Subclass can call superclass constructor in two ways:
+
+```
+class SuperClass():
+    def __init__(self, val):
+        self.val = val
+    def get_val(self):
+        print(self.val)
+
+class Sub(SuperClass):
+    def __init__(self, val):
+        SuperClass.__init__(self, val) # way 1
+        super().__init__(val) # way 2
+```
+Explanation: **SuperClass** represents the class, and **super()** represents an instance of Super class.    
+Note: super() is lower case.
+
+
+
 
 
 
