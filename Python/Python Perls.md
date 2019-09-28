@@ -112,7 +112,7 @@ string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
 ```
 
 **27**
-```From fibo import *``` will not import those beginning with **_**, and if __all__ is not defined in __init__.py, it will NOT import any submodules.
+```From fibo import *``` will not import those beginning with **_**, and if \__all__ is not defined in __init__.py, it will NOT import any submodules.
 
 **28**
 ```python fibo.py 50``` then, ```sys.argv[1]``` can retrieve it.
