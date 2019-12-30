@@ -133,7 +133,7 @@ string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
  ```map(function, sequence)```: apply function to each of element   
  ```filter(function, sequence)```: apply function to each of element, function has to return True or False to filter
  ```reduce(function, sequence)```: apply function to each of element, and combine the result
- 
+
 **35**
 Change variable inside a function should use **global**:   
 
@@ -143,6 +143,25 @@ def some_fun():
 	global a
 	a = 4
 ```
+
+**36**
+
+namedtuple:
+
+from collections import namedtuple. namedtuple is a data structure that assign meaning to each position in a tuple. (i.e. create an object to automatically load tuple value)
+
+```python
+from collections import namedtuple
+Point = namedtuple("poi", ['x', 'y'])
+p = Point(1, 2)
+# Then p.x => 1, p.y => 2
+# p[0] => 1, p[1] => 2
+# p => poi(x=1, y=2)
+```
+
+
+
+
 
 ## Exam perls
 
@@ -188,7 +207,7 @@ Note: super() is lower case.
 
 
 
-	  
+​	  
 
 
- 
+
