@@ -1,6 +1,4 @@
-* Computer can only save 0 and 1 digit. To be able to compute/store/transfer information, we need a encoding and decoding system to translate symbol into number. E.g. A -> 0000 0001. 
-* Encoding system:
-  * ASCII: 7 bits -> 128 symbols including letters, numbers, and etc.
-  * UTF-8: 32 bits -> 1,112,064 symbols including characters from all languages
-* Number vs. number in string: 
-  * 1 vs "1": both 1 is stored as 092, however, in "1", 1 is stored together with quotes, such as 042 092 042, which can be understood by language interpreter that this is number in string.  
+* Computer can only save 0 and 1 digit. To be able to compute/store/transfer information, we need a encoding and decoding system to convert symbol into numbers, and vice versa. E.g. A -> 0000 0001. 
+* Byte vs character:
+  * Byte is 8 bits, which can be represented in the number range of 0 - 255. Byte is raw data that computer can process but is meaningless for human.
+  * Character is human readable format. To convert bytes into character, we need to use encoding. Common encoding includes UTF-8, UTF-16, UTF-32, meaning 1 bytes(8 bits) to 1 character, 2 bytes(16 bits) to 1 character, 4 bytes(32 bits) to 1 character.
