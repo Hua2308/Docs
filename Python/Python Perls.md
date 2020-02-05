@@ -161,8 +161,6 @@ p = Point(1, 2)
 
 
 
-
-
 ## Exam perls
 
 a. **+1/-1** is valid and equals to -1.0.   
