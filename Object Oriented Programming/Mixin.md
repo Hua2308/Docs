@@ -18,6 +18,6 @@
 
 ​        Mitigation:
 
-​        Java: interface D must reimplement the default method. 
+​        Java: After Java 8, interface D must reimplement the default method. Before Java 8, it is perfectly fine to have same name methods in different interfaces ( as they are not implemented anyway, no conflict. )
 
 ​        Python: inherit based on order specified in the tuple of based classes, i.e. D, B, C, A, whichever first contains the method
