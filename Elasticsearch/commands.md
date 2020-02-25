@@ -49,4 +49,4 @@
 
     cat APIs are only intended for human consumption using Kibana console or command line. They are not intended for use by application. For application consumption, JSON API is needed.
 
-  * 
+  * Index can be compared to database, and index name can be similar to database name.
