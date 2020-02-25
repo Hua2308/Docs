@@ -49,4 +49,8 @@
     curl -X DELETE "localhost:9200/*"
     ```
 
+  * Cat APIs vs Json APIs:
+
+    cat APIs are only intended for human consumption using Kibana console or command line. They are not intended for use by application. For application consumption, JSON API is needed.
+
   * 
