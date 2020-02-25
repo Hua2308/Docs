@@ -33,10 +33,6 @@
     curl -X GET "localhost:9200/_cat/indices?v"
     ```
 
-    ``````
-    curl -X GET "localhost:9200/_aliases"
-    ``````
-
   * Delete an index
 
     ```
