@@ -6,7 +6,7 @@
 
   * Check cluster status: ```curl -X GET "localhost:9200/_cat/nodes?v&pretty"```
 
-  * Create a new index entry:
+  * Create a new index:
 
     ```
     curl -X PUT "localhost:9200/twitter?pretty" -H 'Content-Type: application/json' -d'
@@ -31,6 +31,18 @@
 
     ```
     curl -X GET "localhost:9200/_cat/indices?v"
+    ```
+
+  * Show all documents in one index
+
+    ```
+    curl -X GET "localhost:9200/twitter/_search?pretty" -H 'Content-Type: application/json' -d'
+    {
+        "query": {
+            "match_all": {}
+        }
+    }
+    '
     ```
 
   * Delete an index
