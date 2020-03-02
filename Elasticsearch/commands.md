@@ -69,10 +69,30 @@
     curl -X GET "localhost:9200/twitter/_count?q=username:John"
     ```
   
-  * Search docuements by criteria(username="John")
+  * a. Search docuements by criteria(username="John")
   
     ```
     curl -X GET "localhost:9200/twitter/_search?q=username:John"
+    ```
+  
+  * b. Search documents by a list of criteria and filters(username="John" and age > 22) - Also known as 'Compound query'
+  
+    ```
+    curl -X GET "localhost:9200/twitter/_search?
+    {
+    	"query": {
+    		"bool": {
+    			"must": {
+    				"term": {"username": "John"}
+    			},
+    			"must_not": {
+    				"range" : {
+    					"age" : {"gte": 22}
+    				}
+    			}
+    		}
+    	}
+    }
     ```
   
   * Cat APIs vs Json APIs:
