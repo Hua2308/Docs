@@ -63,6 +63,18 @@
   curl -X GET "localhost:9200/twitter/_count?q=*"
     ```
   
+  * Show total number of document by matching a search criteria (username="John")
+  
+    ```
+    curl -X GET "localhost:9200/twitter/_count?q=username:John"
+    ```
+  
+  * Search docuements by criteria(username="John")
+  
+    ```
+    curl -X GET "localhost:9200/twitter/_search?q=username:John"
+    ```
+  
   * Cat APIs vs Json APIs:
   
     cat APIs are only intended for human consumption using Kibana console or command line. They are not intended for use by application. For application consumption, JSON API is needed.
