@@ -57,10 +57,22 @@
     curl -X DELETE "localhost:9200/*"
     ```
 
-  * Show total number of documents
+  * Delete all documents under index
 
     ```
-  curl -X GET "localhost:9200/twitter/_count?q=*"
+  curl -X POST "localhost:9200/twitter/_delete_by_query?pretty" -H 'Content-Type: application/json' -d'
+    {
+      "query": {
+        "match": {}
+      }
+    }
+    '
+    ```
+  
+  * Show total number of documents
+  
+    ```
+    curl -X GET "localhost:9200/twitter/_count?q=*"
     ```
   
   * Show total number of document by matching a search criteria (username="John")
