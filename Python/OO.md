@@ -45,3 +45,4 @@
         def i_am_also_a_static_method():
         	print("static too!")
         ```
+

@@ -107,6 +107,37 @@
     }
     ```
   
+  * Term query vs match query: 
+  
+    The `match` query will apply the same standard analyzer to the search term and will therefore match what is stored in the index. The `term` query does not apply any analyzers to the search term, so will only look for that exact term in the inverted index.
+  
+    ```
+    GET /_search
+    {
+        "query": {
+            "term": {
+                "user": {
+                    "value": "Kimchy",
+                    "boost": 1.0
+                }
+            }
+        }
+    }
+    ```
+  
+    ```
+    GET /_search
+    {
+        "query": {
+            "match" : {
+                "message" : {
+                    "query" : "this is a test"
+                }
+            }
+        }
+    }
+    ```
+  
   * Cat APIs vs Json APIs:
   
     cat APIs are only intended for human consumption using Kibana console or command line. They are not intended for use by application. For application consumption, JSON API is needed.
