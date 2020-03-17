@@ -3,6 +3,8 @@
      * ```docker login <URL>```
    * Login bash
      * ```docker exec -it <container id> /bin/bash```
+* Dockerfile:
+   * Best practice: https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 * Image
    * Create an image
      * ```docker build -t <tag>:<version> --build-arg http_proxy=<proxy_url> --build-arg https_proxy=<proxy_url> .``` 
@@ -23,8 +25,11 @@
      * ```docker rm -f $(docker ps -aq)```
    * List all running containers  
      * ```docker ps```
+   * List all running and stopped containers
+     * ```docker ps -a```
 * Workflow
-  * a. Create a local image or pull it from remote
+  * a. Create a Dockerfile
+  * a. Create a local image based on the Dockerfile or pull it from remote
   * b. Run image as a container (-it as interactive mode)
   * c. Stop container
   * d. Delete image or push image
